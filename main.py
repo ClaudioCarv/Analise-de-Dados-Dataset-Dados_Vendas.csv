@@ -95,19 +95,19 @@ st.title("Dashboard Comercial usando Dataset Dados_Vendas.csv")
 k1, k2, k3, k4 = st.columns(4)
 with k1:
     st.markdown('<div class="metric-card">', unsafe_allow_html=True)
-    st.metric("Receita Total (filtro)", f"R$ {df_f['ValorTotal'].sum():,.2f}")
+    st.metric("Receita Total ", f"R$ {df_f['ValorTotal'].sum():,.2f}")
     st.markdown('</div>', unsafe_allow_html=True)
 with k2:
     st.markdown('<div class="metric-card">', unsafe_allow_html=True)
-    st.metric("Ticket Médio (filtro)", f"R$ {df_f['ValorTotal'].mean():,.2f}")
+    st.metric("Ticket Médio", f"R$ {df_f['ValorTotal'].mean():,.2f}")
     st.markdown('</div>', unsafe_allow_html=True)
 with k3:
     st.markdown('<div class="metric-card">', unsafe_allow_html=True)
-    st.metric("Transações (filtro)", f"{len(df_f)}")
+    st.metric("Transações", f"{len(df_f)}")
     st.markdown('</div>', unsafe_allow_html=True)
 with k4:
     st.markdown('<div class="metric-card">', unsafe_allow_html=True)
-    st.metric("Clientes únicos (filtro)", f"{df_f['IDCliente'].nunique()}")
+    st.metric("Clientes únicos", f"{df_f['IDCliente'].nunique()}")
     st.markdown('</div>', unsafe_allow_html=True)
 
 st.markdown("---")
