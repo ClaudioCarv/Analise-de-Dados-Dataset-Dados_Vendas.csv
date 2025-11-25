@@ -118,7 +118,7 @@ tab_visao, tab_perfil, tab_cat, tab_temp, tab_corr = st.tabs([
 
 with tab_visao:
     st.header("Visão Geral")
-    st.write("Resumo rápido com os insights mais importantes e gráficos interativos.")
+    st.write("Resumo rápido com os insights")
 
     if not df_f.empty and not df_f.empty:
         cat_rev = df_f.groupby('CategoriaProduto')['ValorTotal'].sum().sort_values(ascending=False)
@@ -189,7 +189,6 @@ with tab_visao:
 # -------------------------
 with tab_perfil:
     st.header("Perfil do Cliente")
-    st.write("Comportamento dos clientes, frequência e top clientes — útil para segmentação")
 
     # Top 10 clientes por receita
     st.subheader("Top 10 Clientes por Receita")
@@ -218,7 +217,6 @@ with tab_perfil:
 
 with tab_cat:
     st.header("Análise por Categoria")
-    st.write("Foco em categorias: volume, receita e comportamento.")
 
     # Quantidade total por categoria
     st.subheader("Quantidade total por Categoria")
@@ -273,7 +271,6 @@ with tab_temp:
 
 with tab_corr:
     st.header("Comparações e Correlações")
-    st.write("Relações fáceis de interpretar entre as principais variáveis.")
 
     # Correlação numérica
     num_cols = ['Idade','Quantidade','PrecoPorUnidade','ValorTotal']
